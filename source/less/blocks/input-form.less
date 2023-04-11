@@ -1,0 +1,32 @@
+.input-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form__text {
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+.input-form__field {
+  min-width: 280px;
+  min-height: 58px;
+  border: none;
+  background-color: #f2f2f2;
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: #000000;
+  }
+
+  &--placeholder-color::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
