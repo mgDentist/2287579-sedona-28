@@ -50,71 +50,71 @@
       </div>
       <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="get">
         <fieldset class="form__fieldset">
-          <legend class="form__legend form__legend--primary">Представьтесь:</legend>
-          <label class="input-primary"><span class="input-primary__span">Имя*:</span>
-            <input class="input-primary__text" type="text" name="name" placeholder="Пётр" required>
+          <legend class="form__legend">Представьтесь:</legend>
+          <label class="form__input input-form"><span class="input-form__text">Имя*:</span>
+            <input class="input-form__field" type="text" name="name" placeholder="Пётр" required>
           </label>
-          <label class="input-primary"><span class="input-primary__span">Фамилия*:</span>
-            <input class="input-primary__text" type="text" name="surname" placeholder="Пустота" required>
+          <label class="form__input input-form"><span class="input-form__text">Фамилия*:</span>
+            <input class="input-form__field" type="text" name="surname" placeholder="Пустота" required>
           </label>
-          <label class="input-primary"><span class="input-primary__span">Отчество:</span>
-            <input class="input-primary__text" type="text" name="secondname" placeholder="Викторович">
+          <label class="form__input input-form"><span class="input-form__text">Отчество:</span>
+            <input class="input-form__field" type="text" name="secondname" placeholder="Викторович">
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Контактная информация:
           </legend>
-          <label class="input-primary"><span class="input-primary__span">Контактный телефон*:</span>
-            <input class="input-primary__text input-primary__text--phone input-primary__text--grey" type="tel" name="contact-information"
+          <label class="form__input input-form"><span class="input-form__text">Контактный телефон*:</span>
+            <input class="input-form__field input-form__field--phone input-form__field--placeholder-color" type="tel" name="contact-information"
               placeholder="Введите телефон" required>
           </label>
-          <label class="input-primary"><span class="input-primary__span">Электронная почта*:</span>
-            <input class="input-primary__text input-primary__text--emai input-primary__text--grey" type="email" name="contact-information"
+          <label class="form__input input-form"><span class="input-form__text">Электронная почта*:</span>
+            <input class="input-form__field input-form__field--email input-form__field--placeholder-color" type="email" name="contact-information"
               placeholder="Введите e-mail" required>
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Ваше общее впечатление:</legend>
-          <label class="input-secondary">
-            <input class="input-secondary__check" type="radio" name="impression" value="rather-positive" checked>
-            <span class="input-secondary__span">Скорее положительное</span>
+          <label class="form__checkbox input-checkbox">
+            <input class="input-checkbox__field input-checkbox__field--radio" type="radio" name="impression" value="rather-positive" checked>
+            <span class="input-checkbox__text">Скорее положительное</span>
           </label>
-          <label class="input-secondary">
-            <input class="input-secondary__check" type="radio" name="impression" value="rather-negative">
-            <span class="input-secondary__span">Скорее отрицательное</span>
+          <label class="form__checkbox input-checkbox">
+            <input class="input-checkbox__field input-checkbox__field--radio" type="radio" name="impression" value="rather-negative">
+            <span class="input-checkbox__text">Скорее отрицательное</span>
           </label>
-          <label class="input-secondary">
-            <input class="input-secondary__check " type="radio" name="impression" value="dificult-to-answer">
-            <span class="input-secondary__span">Затрудняюсь ответить</span>
+          <label class="form__checkbox input-checkbox">
+            <input class="input-checkbox__field input-checkbox__field--radio" type="radio" name="impression" value="dificult-to-answer">
+            <span class="input-checkbox__text">Затрудняюсь ответить</span>
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Посещенные достопримечательности:</legend>
-          <label class="input-secondary">
-            <input class="input-secondary__check input-secondary__check--tick" type="checkbox" name="sights"
+          <label class="input-checkbox">
+            <input class="input-checkbox__field" type="checkbox" name="sights"
               value="devil-bridge" checked>
-            <span class="input-secondary__span">Мост дьявола</span>
+            <span class="input-checkbox__text">Мост дьявола</span>
           </label>
-          <label class="input-secondary">
-            <input class="input-secondary__check input-secondary__check--tick" type="checkbox" name="sights"
+          <label class="input-checkbox">
+            <input class="input-checkbox__field" type="checkbox" name="sights"
               value="mountain-bell" checked>
-            <span class="input-secondary__span">Гора-Колокол</span>
+            <span class="input-checkbox__text">Гора-Колокол</span>
           </label>
-          <label class="input-secondary">
-            <input class="input-secondary__check input-secondary__check--tick" type="checkbox" name="sights"
+          <label class="input-checkbox">
+            <input class="input-checkbox__field" type="checkbox" name="sights"
               value="slide-park" checked>
-            <span class="input-secondary__span">Слайд-парк</span>
+            <span class="input-checkbox__text">Слайд-парк</span>
           </label>
-          <label class="input-secondary">
-            <input class="input-secondary__check input-secondary__check--tick" type="checkbox" name="sights"
+          <label class="input-checkbox">
+            <input class="input-checkbox__field" type="checkbox" name="sights"
               value="red-rocks">
-            <span class="input-secondary__span">Красные скалы</span>
+            <span class="input-checkbox__text">Красные скалы</span>
           </label>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Опишите свои эмоции:</legend>
-          <label class="input-tertiary"><span class="visually-hidden">Опишите ваши эмоции</span>
-            <textarea class="input-tertiary__area" name="text-emotions"
+          <label class="form__textarea"><span class="visually-hidden">Опишите ваши эмоции</span>
+            <textarea class="form__field" name="text-emotions"
               placeholder="Опишите подробно все свои восторги"></textarea>
           </label>
         </fieldset>
