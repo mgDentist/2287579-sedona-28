@@ -1,3 +1,11 @@
+.site-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
 .site-list__link {
   display: block;
   padding: 17px 15px 12px;
@@ -8,4 +16,17 @@
   text-decoration: none;
   color: #ffffff;
   background-color: #81b3d2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    background-color: transparent;
+  }
+
+  &--current {
+    @media (min-width: @tablet-width) {
+      color: #766357;
+    }
+  }
 }

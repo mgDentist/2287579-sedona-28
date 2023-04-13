@@ -1,13 +1,38 @@
 .advantages-list {
   .clear-list();
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages-list__item {
   background-color: #81b3d2;
 
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+
   &--additional {
     padding: 24px 18px 28px;
     background-color: #eeeeee;
+
+    @media (min-width: @tablet-width) {
+      width: 256px;
+      display: block;
+      padding: 0;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 400px;
+    }
   }
 }
 

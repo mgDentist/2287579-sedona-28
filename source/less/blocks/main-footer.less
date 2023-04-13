@@ -1,16 +1,23 @@
 .main-footer {
   padding: 33px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 120px;
+  }
 }
 
 .main-footer__title {
   margin: 0;
-  margin-bottom: 30px;
   font-size: 21px;
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
-}
-
-.main-footer__socials {
-  margin-bottom: 30px;
 }
