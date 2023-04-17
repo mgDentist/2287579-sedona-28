@@ -1,6 +1,33 @@
 .input-form {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &--icon {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      top: 21px;
+      right: 0;
+      background-color: #e6e6e6;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--icon-phone {
+    &::after {
+      background-image: url("../img/icon-phone.svg");
+    }
+  }
+
+  &--icon-mail {
+    &::after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
 }
 
 .input-form__text {
@@ -16,6 +43,7 @@
 .input-form__field {
   width: 280px;
   min-height: 58px;
+  padding: 16px;
   border: none;
   background-color: #f2f2f2;
 

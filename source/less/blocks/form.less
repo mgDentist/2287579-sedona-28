@@ -19,7 +19,7 @@
   display: block;
   width: 280px;
   padding: 16px 20px;
-  margin: 56px auto 3px;
+  margin: 0 auto 3px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
@@ -41,11 +41,13 @@
 }
 
 .form__fieldset {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 0;
   padding: 0;
+  padding-bottom: 34px;
   margin-bottom: 24px;
   border: none;
 
@@ -54,9 +56,139 @@
       grid-column: 1 / 3;
     }
   }
+
+  @media (max-width: 767px) {
+    &::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 320px;
+      top: -70px;
+      left: -20px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  &--divider-vertical {
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 338px;
+        top: -40px;
+        left: -28.5px;
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        left: -49.5px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    &--impression {
+      position: relative;
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 36px;
+      column-gap: 49px;
+      padding: 18px 36px 34px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+    }
+
+    &--sights {
+      position: relative;
+      display: grid;
+      grid-template-columns: 224px 224px;
+      row-gap: 36px;
+      column-gap: 32px;
+      padding-left: 84px;
+      padding-right: 84px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -35px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+
+      @media (min-width: @desktop-width) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 64px;
+        padding-left: 44.5px;
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &--impression {
+      &::before {
+        width: 280px;
+      }
+    }
+
+    &--impression {
+      &::after {
+        width: 280px;
+      }
+    }
+
+    &--sights {
+      &::before {
+        width: 280px;
+      }
+    }
+
+    &--sights {
+      &::after {
+        width: 280px;
+      }
+    }
+  }
 }
 
 .form__legend {
+  position: relative;
   margin-bottom: 20px;
   padding: 0;
   font-weight: 700;
@@ -64,11 +196,20 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .form__field {
   min-width: 279px;
   min-height: 150px;
+  padding: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
   background-color: #f2f2f2;
   border: none;
   resize: none;
@@ -79,5 +220,13 @@
 
   @media (min-width: @desktop-width) {
     width: 768px;
+  }
+}
+
+.form__checkbox {
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }

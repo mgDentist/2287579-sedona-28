@@ -11,5 +11,45 @@
 
   @media (min-width: @tablet-width) {
     width: 458px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 66px;
   }
 }
+
+.hotels-search__map-wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 50% - 5px;
+    left: 50% - 5px;
+    background-image: url("../img/icon-map-marker.svg");
+
+    @media (min-width: @tablet-width) {
+      left: 50% - 2px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 50% - 1px;
+    }
+  }
+}
+
+.hotels-search__map {
+  object-fit: none;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
+}
+

@@ -1,5 +1,31 @@
+.copyright {
+  width: 129px;
+
+}
+
 .copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
+
+  @media (min-width: @desktop-width) {
+    &:hover span {
+      color: #81b3d2;
+    }
+
+    &:hover svg {
+      fill: #81b3d2;
+    }
+  }
+
+  &:active span {
+    color: #b3b3b3;
+  }
+
+  &:active svg {
+    fill: #b3b3b3;
+  }
 }
 
 .copyright__text {
@@ -7,4 +33,10 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.copyright__icon {
+  &:active {
+    fill: #b3b3b3;
+  }
 }

@@ -1,4 +1,5 @@
 .hero-main {
+  position: relative;
   padding: 52px 46px 67px 45px;
   background-color: #273b47;
   background-image: url("../img/backgroundm-secondary.jpg");
@@ -8,6 +9,22 @@
   &--index {
     padding: 90px 19px 85px;
     background-image: url("../img/backgroundm.jpg");
+
+    @media (min-width: @desktop-width) {
+      background-size: cover;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 57px;
+    background-image: url("../img/divider-primary.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

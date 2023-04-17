@@ -1,5 +1,31 @@
 .text-element {
-  padding: 32px 18px;
+  &--advantages {
+    padding: 32px 18px;
+
+    @media (min-width: @tablet-width) {
+      padding: 47px 124px 56px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 59px 358px 44px;
+    }
+  }
+
+  &--interest {
+    padding: 38px 29px 32px;
+  }
+
+  &--feedback {
+    padding: 36px 20px 28px;
+
+    @media (min-width: @tablet-width) {
+      padding: 64px 166.5px 48px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 115px 382.5px 48px;
+    }
+  }
 }
 
 .text-element__title {
@@ -13,6 +39,7 @@
 
 .text-element__subtitle {
   margin: 0;
+  margin-top: 20px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
