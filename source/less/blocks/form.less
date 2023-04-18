@@ -1,17 +1,18 @@
 .form {
   padding: 24px 20px 5px;
+  border-top: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 295px 295px;
     column-gap: 58px;
-    padding: 0 60px;
+    padding: 0 60px 64px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 430px 430px;
     column-gap: 100px;
-    padding: 0 120px;
+    padding: 0 120px 64px;
   }
 }
 
@@ -38,6 +39,14 @@
   text-transform: uppercase;
   text-align: right;
   color: rgba(51, 51, 51, 0.6);
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 96px;
+  }
 }
 
 .form__fieldset {
@@ -58,12 +67,12 @@
   }
 
   @media (max-width: 767px) {
-    &::before {
+    &:not(:last-child)::after {
       content: "";
       position: absolute;
       height: 1px;
       width: 320px;
-      top: -70px;
+      bottom: 0;
       left: -20px;
       background-color: #e5e5e5;
     }
@@ -100,12 +109,16 @@
       column-gap: 49px;
       padding: 18px 36px 34px;
 
+      @media (min-width: @desktop-width) {
+        justify-content: center;
+      }
+
       &::before {
         content: "";
         position: absolute;
         width: 123px;
         height: 1px;
-        top: -35px;
+        top: -45px;
         left: 0;
         background-color: #dbdbdb;
       }
@@ -115,9 +128,13 @@
         position: absolute;
         width: 123px;
         height: 1px;
-        top: -35px;
+        top: -45px;
         right: 0;
         background-color: #dbdbdb;
+      }
+
+      & .form__legend {
+        margin-bottom: 35px;
       }
     }
 
@@ -135,7 +152,7 @@
         position: absolute;
         width: 123px;
         height: 1px;
-        top: -35px;
+        top: -95px;
         left: 0;
         background-color: #dbdbdb;
       }
@@ -145,9 +162,13 @@
         position: absolute;
         width: 123px;
         height: 1px;
-        top: -35px;
+        top: -95px;
         right: 0;
         background-color: #dbdbdb;
+      }
+
+      & .form__legend {
+        margin-bottom: 69px;
       }
 
       @media (min-width: @desktop-width) {
@@ -156,6 +177,7 @@
         flex-wrap: wrap;
         column-gap: 64px;
         padding-left: 44.5px;
+        padding-right: 44.5px;
       }
     }
   }
@@ -165,9 +187,7 @@
       &::before {
         width: 280px;
       }
-    }
 
-    &--impression {
       &::after {
         width: 280px;
       }
@@ -177,9 +197,7 @@
       &::before {
         width: 280px;
       }
-    }
 
-    &--sights {
       &::after {
         width: 280px;
       }

@@ -26,6 +26,30 @@
       padding: 115px 382.5px 48px;
     }
   }
+
+  &--content {
+    padding: 37px 20px 25px;
+
+    @media (min-width: @tablet-width) {
+      padding: 66px 155px 67px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 100px 372px 65px 370px;
+    }
+  }
+
+  &--video-block {
+    padding: 17px 26px 38px 28px;
+
+    @media (min-width: @tablet-width) {
+      padding: 58px 162px 66px 161px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 62px 378px 64px 377px;
+    }
+  }
 }
 
 .text-element__title {
@@ -35,6 +59,10 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .text-element__subtitle {
@@ -44,4 +72,8 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #333333;
+
+  @media (min-width: @tablet-width) {
+    line-height: 26px;
+  }
 }

@@ -6,11 +6,30 @@
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    padding: 95px 154px 117.5px 175px;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+    padding: 101px 360px 120px;
+    background-size: cover;
+  }
+
   &--index {
     padding: 90px 19px 85px;
     background-image: url("../img/backgroundm.jpg");
 
+    @media (min-width: @tablet-width) {
+      min-height: 518px;
+      padding: 77px 153px 101px;
+      background-size: cover;
+    }
+
     @media (min-width: @desktop-width) {
+      padding: 78px 370px 100px;
       background-size: cover;
     }
   }
