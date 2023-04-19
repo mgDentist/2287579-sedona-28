@@ -1,6 +1,9 @@
 .form {
   padding: 24px 20px 5px;
-  border-top: 1px solid #e5e5e5;
+
+  @media (max-width: 767px) {
+    border-top: 1px solid #e5e5e5;
+  }
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -24,12 +27,12 @@
 
   @media (min-width: @tablet-width) {
     width: 324px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 384px;
-    margin-left: auto;
-    margin-right: -50px;
+    margin-left: 96px;
   }
 }
 
@@ -67,7 +70,7 @@
   }
 
   @media (max-width: 767px) {
-    &:not(:last-child)::after {
+    &:not(:last-of-type)::after {
       content: "";
       position: absolute;
       height: 1px;
@@ -133,7 +136,7 @@
         background-color: #dbdbdb;
       }
 
-      & .form__legend {
+      .form__legend {
         margin-bottom: 35px;
       }
     }
@@ -167,7 +170,7 @@
         background-color: #dbdbdb;
       }
 
-      & .form__legend {
+      .form__legend {
         margin-bottom: 69px;
       }
 
@@ -225,6 +228,7 @@
   min-height: 150px;
   padding: 16px;
   font-weight: 700;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
   line-height: 26px;
   color: rgba(0, 0, 0, 0.3);

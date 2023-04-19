@@ -8,6 +8,35 @@
   }
 }
 
+.video-block__img-wrapper {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50% - 10px;
+    left: 50% - 5px;
+    border-style: solid;
+    border-width: 24px 0 24px 48px;
+    border-color: transparent transparent transparent #ffffff70;
+
+    @media (min-width: @tablet-width) {
+      top: 50% - 5px;
+      left: 50% - 3px;
+    }
+  }
+}
+
 .video-block__img {
   display: block;
   margin: 0 auto;
