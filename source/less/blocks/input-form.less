@@ -52,11 +52,23 @@
   color: #000000;
   background-color: #f2f2f2;
 
+  @media (min-width: @tablet-width) {
+    width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
+
   &::placeholder {
     font-weight: 700;
     font-size: 18px;
     line-height: 26px;
     color: #000000;
+  }
+
+  &--placeholder-color::placeholder {
+    color: rgba(0, 0, 0, 0.3);
   }
 
   &:hover {
@@ -69,17 +81,5 @@
     background-color: #ffffff;
     outline: none;
     box-shadow: inset 0 0 0 4px #e5e5e5;
-  }
-
-  &--placeholder-color::placeholder {
-    color: rgba(0, 0, 0, 0.3);
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 295px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 430px;
   }
 }
