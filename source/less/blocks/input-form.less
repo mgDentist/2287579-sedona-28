@@ -1,6 +1,33 @@
 .input-form {
+  position: relative;
   display: flex;
   flex-direction: column;
+
+  &--icon {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 58px;
+      height: 58px;
+      top: 21px;
+      right: 0;
+      background-color: #e6e6e6;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--icon-phone {
+    &::after {
+      background-image: url("../img/icon-phone.svg");
+    }
+  }
+
+  &--icon-mail {
+    &::after {
+      background-image: url("../img/icon-mail.svg");
+    }
+  }
 }
 
 .input-form__text {
@@ -16,8 +43,22 @@
 .input-form__field {
   width: 280px;
   min-height: 58px;
+  padding: 16px;
   border: none;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    width: 295px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
 
   &::placeholder {
     font-weight: 700;
@@ -30,11 +71,15 @@
     color: rgba(0, 0, 0, 0.3);
   }
 
-  @media (min-width: @tablet-width) {
-    width: 295px;
+  &:hover {
+    background-color: #e5e5e5;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 430px;
+  &:placeholder-shown:focus,
+  &:not(:placeholder-shown):hover,
+  &:not(:placeholder-shown):focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
   }
 }

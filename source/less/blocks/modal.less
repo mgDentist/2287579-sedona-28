@@ -2,9 +2,43 @@
   padding: 39px 39px 30px 37px;
 }
 
+.modal__fail-wrapper {
+  padding: 45px 42px 35px 41px;
+}
+
 .modal {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
+  &--success-closed,
+  &--fail-closed {
+    display: none;
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+  width: 320px;
+  margin: auto;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+
   &--fail {
-    padding: 45px 42px 35px 41px;
+    @media (min-width: @tablet-width) {
+      width: 400px;
+    }
   }
 }
 

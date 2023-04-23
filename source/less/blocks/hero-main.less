@@ -1,13 +1,49 @@
 .hero-main {
+  position: relative;
   padding: 52px 46px 67px 45px;
   background-color: #273b47;
   background-image: url("../img/backgroundm-secondary.jpg");
   background-repeat: no-repeat;
   background-position: center;
 
+  @media (min-width: @tablet-width) {
+    min-height: 290px;
+    padding: 95px 154px 117px 175px;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 301px;
+    padding: 101px 360px 120px;
+    background-size: cover;
+  }
+
   &--index {
     padding: 90px 19px 85px;
     background-image: url("../img/backgroundm.jpg");
+
+    @media (min-width: @tablet-width) {
+      min-height: 518px;
+      padding: 77px 153px 101px;
+      background-size: cover;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 78px 370px 100px;
+      background-size: cover;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 57px;
+    background-image: url("../img/divider-primary.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 

@@ -1,0 +1,33 @@
+.textarea-form__field {
+  min-width: 279px;
+  min-height: 150px;
+  padding: 16px;
+  font-weight: 700;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  resize: none;
+
+  &::placeholder {
+    color: #00000030;
+  }
+
+  &:placeholder-shown:focus,
+  &:not(:placeholder-shown):hover,
+  &:not(:placeholder-shown):focus {
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: inset 0 0 0 4px #e5e5e5;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+  }
+}

@@ -1,17 +1,21 @@
 .form {
   padding: 24px 20px 5px;
 
+  @media (max-width: 767px) {
+    border-top: 1px solid #e5e5e5;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 295px 295px;
     column-gap: 58px;
-    padding: 0 60px;
+    padding: 0 60px 64px;
   }
 
   @media (min-width: @desktop-width) {
     grid-template-columns: 430px 430px;
     column-gap: 100px;
-    padding: 0 120px;
+    padding: 0 120px 64px;
   }
 }
 
@@ -19,16 +23,16 @@
   display: block;
   width: 280px;
   padding: 16px 20px;
-  margin: 56px auto 3px;
+  margin: 0 auto 3px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 384px;
-    margin-left: auto;
-    margin-right: -50px;
+    margin-left: 96px;
   }
 }
 
@@ -38,25 +42,164 @@
   text-transform: uppercase;
   text-align: right;
   color: rgba(51, 51, 51, 0.6);
+
+  @media (min-width: @tablet-width) {
+    align-self: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 96px;
+  }
 }
 
 .form__fieldset {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 0;
   padding: 0;
+  padding-bottom: 34px;
   margin-bottom: 24px;
   border: none;
+
+  &:not(:last-of-type)::after {
+    @media (max-width: 767px) {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 320px;
+      bottom: 0;
+      left: -20px;
+      background-color: #e5e5e5;
+    }
+  }
 
   &--long {
     @media (min-width: @tablet-width) {
       grid-column: 1 / 3;
     }
   }
+
+  &--divider-vertical {
+    position: relative;
+
+    @media (min-width: @tablet-width) {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 338px;
+        top: -40px;
+        left: -28px;
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      &::before {
+        left: -49px;
+      }
+    }
+  }
+
+  &--impression {
+    @media (min-width: @tablet-width) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      row-gap: 36px;
+      column-gap: 49px;
+      padding: 18px 36px 34px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -40px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -40px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      justify-content: center;
+
+      &::before {
+        width: 280px;
+        top: -60px;
+      }
+
+      &::after {
+        width: 280px;
+        top: -60px;
+      }
+    }
+  }
+
+  &--sights {
+    @media (min-width: @tablet-width) {
+      display: grid;
+      grid-template-columns: 224px 224px;
+      row-gap: 36px;
+      column-gap: 32px;
+      padding-left: 84px;
+      padding-right: 84px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -50px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: -50px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 64px;
+      padding-left: 44px;
+      padding-right: 44px;
+
+      &::before {
+        width: 280px;
+        top: -80px;
+      }
+
+      &::after {
+        width: 280px;
+        top: -80px;
+      }
+    }
+  }
 }
 
 .form__legend {
+  position: relative;
   margin-bottom: 20px;
   padding: 0;
   font-weight: 700;
@@ -64,20 +207,29 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
-}
-
-.form__field {
-  min-width: 279px;
-  min-height: 150px;
-  background-color: #f2f2f2;
-  border: none;
-  resize: none;
 
   @media (min-width: @tablet-width) {
-    width: 648px;
+    margin-bottom: 28px;
+    font-size: 21px;
   }
 
-  @media (min-width: @desktop-width) {
-    width: 768px;
+  &--impression {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &--sights {
+    @media (min-width: @desktop-width) {
+      margin-bottom: 59px;
+    }
+  }
+}
+
+.form__checkbox {
+  @media (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 }

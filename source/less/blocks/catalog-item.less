@@ -1,4 +1,29 @@
 .catalog-item {
+  position: relative;
+  padding-bottom: 25px;
+  padding-top: 24px;
+  text-align: left;
+
+  @media (max-width: 767px) {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: -20px;
+      width: 320px;
+      height: 1px;
+      background-color: #e5e5e5;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+    background-color: #f2f2f2;
+  }
+
   &--darken {
     @media (min-width: @tablet-width) and (max-width: @desktop-width) {
       background-color: #eaeaea;
@@ -16,8 +41,17 @@
   }
 }
 
-.catalog-item__figure {
-  margin: 0;
+.catalog-item__description-wrapper {
+  @media (min-width: @tablet-width) {
+    padding: 22px 20px 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #00000030;
+  }
 }
 
 .catalog-item__image {
@@ -25,32 +59,69 @@
   margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 22px;
+    margin: 0;
+    width: 100%;
   }
 }
 
 .catalog-item__figcaption {
-  padding-left: 20px;
-  margin-bottom: 15px;
+  margin: 0;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  text-align: left;
   color: #000000;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .catalog-item__address {
-  padding-left: 20px;
+  margin: 0;
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  text-align: left;
   color: #333333;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
 }
 
 .catalog-item__link {
   display: block;
-  margin-top: 15px;
+}
+
+.catalog-item__span {
+  margin-left: 14px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+
+  @media (min-width: @desktop-width) {
+    color: #ffffff;
+  }
+}
+
+.catalog-item__button {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.catalog-item__svg {
+  @media (max-width: 1279px) {
+    fill: #000000;
+    opacity: 0.3;
+  }
 }

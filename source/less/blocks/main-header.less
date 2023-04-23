@@ -1,22 +1,139 @@
+.main-header {
+  min-height: 56px;
+}
+
+.main-header__nav {
+  z-index: 2;
+  width: 320px;
+  position: relative;
+
+  &--opened {
+    position: absolute;
+    background-color: #81b3d2;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    background-color: transparent;
+  }
+}
+
+.main-header__logo {
+  z-index: 1;
+  width: 185px;
+  height: 96px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
 .main-header__logo-image {
   display: block;
-  margin: 0 auto;
 }
 
 .main-header__list {
   .clear-list();
 
   @media (min-width: @tablet-width) {
-    padding: 18px 29px 17px 50px;
+    padding-left: 50px;
+    padding-right: 28px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 18px 71px 17px 91px;
+    padding-left: 91px;
+    padding-right: 71px;
   }
 }
 
 .main-header__toggle {
+  z-index: 3;
+  position: absolute;
+  display: block;
+  width: 23px;
+  height: 23px;
+  right: 20px;
+  top: 17px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-header__nav--closed .main-header__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 4px;
+    top: 0;
+    right: 0;
+    background-color: #81b3d2;
+    box-shadow: 0 9px 0 0 #81b3d2, 0 18px 0 0 #81b3d2;
+  }
+
+  &:hover::before {
+    background-color: #81b3d260;
+    box-shadow: 0 9px 0 0 #81b3d260, 0 18px 0 0 #81b3d260;
+  }
+
+  &:active::before {
+    background-color: #81b3d230;
+    box-shadow: 0 9px 0 0 #81b3d230, 0 18px 0 0 #81b3d230;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-header__nav--closed .site-list__item {
+    display: none;
+  }
+
+  .main-header__nav--nojs .main-header__toggle {
+    display: none;
+  }
+
+  .main-header__nav--nojs .site-list__item {
+    display: block;
+    background-color: #81b3d2;
+  }
+
+  .main-header__nav--nojs .site-list {
+    position: static;
+    background-color: #81b3d2;
+  }
+}
+
+.main-header__nav--opened .main-header__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    top: 9px;
+    right: -2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: fade(#ffffff, 60%);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 30%);
   }
 }
