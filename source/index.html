@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -40,7 +44,7 @@
     <main class="main-container">
       <section class="hero-main hero-main--index">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <img class="hero-main__image" src="img/text-index-sedona.svg" width="282" height="214"
+        <img class="hero-main__image hero-main__image--index" src="img/text-index-sedona.svg" width="282" height="214"
           alt="Welcome to the gorgeous Sedona because The Grand Canyon sucks.">
       </section>
       <section class="advantages">
@@ -55,8 +59,14 @@
               <p class="advantages-list__subtitle">— №1 —</p>
               <p class="advantages-list__subtitle">Седона не аттракцион для туристов, там течет своя жизнь</p>
             </div>
-            <img class="advantages-list__image" src="img/photo-city.jpg" width="320" height="260"
-              alt="Американский городок Седона. Вид на район.">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/photo-city-desktop.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+              <img class="advantages-list__image" src="img/photo-city-mobile.jpg"
+                srcset="img/photo-city-mobile@2x.jpg 2x" width="320" height="260"
+                alt="Американский городок Седона. Вид на район.">
+            </picture>
             <ul class="advantages-sublist">
               <li class="advantages-sublist__item advantages-sublist__item--housing">
                 <div class="advantages-sublist__wrapper">
@@ -84,8 +94,15 @@
               <p class="advantages-list__subtitle">— №2 —</p>
               <p class="advantages-list__subtitle">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="advantages-list__image" src="img/photo-bridge.jpg" width="320" height="260"
-              alt="Американский городок Седона. Вид на район.">
+            <picture>
+              <source media="(min-width: 1280px)"
+                srcset="img/photo-bridge-desktop.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="advantages-list__image" src="img/photo-bridge-mobile.jpg"
+                srcset="img/photo-bridge-mobile@2x.jpg 2x" width="320" height="260"
+                alt="Американский городок Седона. Вид на район.">
+            </picture>
           </li>
           <li class="advantages-list__item advantages-list__item--additional">
             <div class="advantages-list-text-wrapper advantages-list-text-wrapper--additional">
@@ -121,8 +138,12 @@
         </div>
         <a class="hotels-search__link button" href="#">Найти Гостиницу</a>
         <div class="hotels-search__map-wrapper">
-          <img class="hotels-search__map" src="img/map.jpg" width="320" height="350"
-            alt="Спутниковая карта участка штата Аризона, город Седона.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg 1x, img/map-tablet@2x.jpg 2x">
+            <img class="hotels-search__map" src="img/map-mobile.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320"
+              height="350" alt="Спутниковая карта участка штата Аризона, город Седона.">
+          </picture>
         </div>
       </section>
     </main>
