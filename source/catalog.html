@@ -7,6 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -51,8 +55,15 @@
         <ul class="catalog-content__list catalog-list">
           <li class="catalog-list__item catalog-item catalog-item--wide">
             <a class="catalog-item__link" href="#">
-              <img class="catalog-item__image" src="img/catalog-sunset.jpg" width="280" height="280"
-                alt="Американская дорога на закате.">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog-sunset-desktop.jpg 1x, img/catalog-sunset-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-sunset-tablet.jpg 1x, img/catalog-sunset-tablet@2x.jpg 2x">
+                <img class="catalog-item__image" src="img/catalog-sunset-mobile.jpg"
+                  srcset="img/catalog-sunset-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Американская дорога на закате.">
+              </picture>
             </a>
             <div class="catalog-item__description-wrapper">
               <p class="catalog-item__figcaption">Неродные просторы</p>
@@ -69,8 +80,15 @@
           </li>
           <li class="catalog-list__item catalog-item">
             <a class="catalog-item__link" href="#">
-              <img class="catalog-item__image" src="img/catalog-cactus.jpg" width="280" height="280"
-                alt="Кактус в фокусе на фоне размытых гор.">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog-cactus-desktop.jpg 1x, img/catalog-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-cactus-tablet.jpg 1x, img/catalog-cactus-tablet@2x.jpg 2x">
+                <img class="catalog-item__image" src="img/catalog-cactus-mobile.jpg"
+                  srcset="img/catalog-cactus-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Кактус в фокусе на фоне размытых гор.">
+              </picture>
             </a>
             <div class="catalog-item__description-wrapper">
               <p class="catalog-item__figcaption">Местная растительность</p>
@@ -87,8 +105,15 @@
           </li>
           <li class="catalog-list__item catalog-item catalog-item--darken">
             <a class="catalog-item__link" href="#">
-              <img class="catalog-item__image" src="img/catalog-forest.jpg" width="280" height="280"
-                alt="Извилистая дорога (серпантин), окруженная лесом в горах.">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog-forest-desktop.jpg 1x, img/catalog-forest-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-forest-tablet.jpg 1x, img/catalog-forest-tablet@2x.jpg 2x">
+                <img class="catalog-item__image" src="img/catalog-forest-mobile.jpg"
+                  srcset="img/catalog-forest-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Извилистая дорога (серпантин), окруженная лесом в горах.">
+              </picture>
             </a>
             <div class="catalog-item__description-wrapper">
               <p class="catalog-item__figcaption">Дорога на север</p>
@@ -105,8 +130,15 @@
           </li>
           <li class="catalog-list__item catalog-item">
             <a class="catalog-item__link" href="#">
-              <img class="catalog-item__image" src="img/catalog-rocks.jpg" width="280" height="280"
-                alt="Мост дьявола на фоне скал Седоны и долины.">
+              <picture>
+                <source media="(min-width: 1280px)"
+                  srcset="img/catalog-rocks-desktop.jpg 1x, img/catalog-rocks-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/catalog-rocks-tablet.jpg 1x, img/catalog-rocks-tablet@2x.jpg 2x">
+                <img class="catalog-item__image" src="img/catalog-rocks-mobile.jpg"
+                  srcset="img/catalog-rocks-mobile@2x.jpg 2x" width="280" height="280"
+                  alt="Мост дьявола на фоне скал Седоны и долины.">
+              </picture>
             </a>
             <div class="catalog-item__description-wrapper">
               <p class="catalog-item__figcaption">Мост дьявола</p>
@@ -130,7 +162,12 @@
             очередной раз!</p>
         </div>
         <div class="video-block__img-wrapper">
-          <img class="video-block__img" src="img/video-img.jpg" width="280" height="177" alt="Превью видео.">
+          <picture>
+            <source media="(min-width: 1280px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+            <img class="video-block__img" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280"
+              height="177" alt="Превью видео.">
+          </picture>
         </div>
       </section>
     </main>
