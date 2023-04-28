@@ -120,8 +120,11 @@
 }
 
 .catalog-item__svg {
-  @media (max-width: 1279px) {
-    fill: #000000;
-    opacity: 0.3;
+  fill: #000000;
+  opacity: 0.3;
+
+  @media (min-width: @desktop-width) {
+    fill: #ffffff;
+    opacity: 1;
   }
 }
