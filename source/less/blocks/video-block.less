@@ -15,6 +15,8 @@
 
   @media (min-width: @tablet-width) {
     width: 648px;
+    padding-top: 18px;
+    padding-bottom: 5px;
   }
 
   @media (min-width: @desktop-width) {
@@ -32,6 +34,10 @@
     background-repeat: no-repeat;
     background-position: center;
     translate: -50% -50%;
+
+    @media (min-width: @tablet-width) {
+      translate: -50% -38%;
+    }
   }
 }
 

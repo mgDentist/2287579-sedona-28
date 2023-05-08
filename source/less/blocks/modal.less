@@ -1,9 +1,17 @@
 .modal__success-wrapper {
-  padding: 39px 39px 30px 37px;
+  padding: 38px 39px 23px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 68px 4px;
+  }
 }
 
 .modal__fail-wrapper {
-  padding: 45px 42px 35px 41px;
+  padding: 43px 42px 35px 41px;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 42px 35px;
+  }
 }
 
 .modal {
@@ -50,24 +58,55 @@
 
   &--success {
     min-width: 280px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 458px;
+      font-size: 21px;
+    }
   }
 
   &--fail {
     min-width: 180px;
+
+    @media (min-width: @tablet-width) {
+      min-width: 272px;
+      margin-bottom: 13px;
+    }
   }
 }
 
 .modal__wrapper-btn-success {
   padding: 20px;
   background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 44px;
+    padding-top: 46px;
+  }
 }
 
 .modal__title {
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 36px;
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .modal__subtitle {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 29px;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 46px;
+  }
 }

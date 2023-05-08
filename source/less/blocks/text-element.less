@@ -1,41 +1,49 @@
 .text-element {
   &--advantages {
-    padding: 32px 18px;
+    padding: 33px 24px 31px;
 
     @media (min-width: @tablet-width) {
-      padding: 47px 124px 56px;
+      padding: 48px 124px 52px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 59px 358px 44px;
+      padding: 60px 358px 40px;
     }
   }
 
   &--interest {
-    padding: 38px 29px 32px;
+    padding: 41px 29px 32px;
+
+    @media (min-width: @tablet-width) {
+      padding-top: 60px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-top: 62px;
+    }
   }
 
   &--feedback {
     padding: 36px 20px 28px;
 
     @media (min-width: @tablet-width) {
-      padding: 64px 166px 48px;
+      padding: 64px 166px 102px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 115px 382px 48px;
+      padding: 115px 382px 63px;
     }
   }
 
   &--content {
-    padding: 37px 20px 25px;
+    padding: 37px 20px;
 
     @media (min-width: @tablet-width) {
-      padding: 66px 155px 67px;
+      padding: 66px 165px 76px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 100px 372px 65px 370px;
+      padding: 98px 378px 84px;
     }
   }
 
@@ -43,11 +51,11 @@
     padding: 17px 26px 38px 28px;
 
     @media (min-width: @tablet-width) {
-      padding: 58px 162px 66px 161px;
+      padding: 57px 162px 66px 161px;
     }
 
     @media (min-width: @desktop-width) {
-      padding: 62px 378px 64px 377px;
+      padding: 60px 377px 64px;
     }
   }
 }
@@ -61,7 +69,49 @@
   color: #000000;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
     font-size: 21px;
+  }
+
+  &--interest {
+    margin-bottom: 20px;
+    font-size: 21px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 28px;
+      font-size: 30px;
+      line-height: 25px;
+    }
+  }
+
+  &--catalog {
+    margin-bottom: 25px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 27px;
+      font-size: 30px;
+    }
+  }
+
+  &--video-block {
+    margin-bottom: 26px;
+
+    @media (min-width: @tablet-width) {
+      font-size: 30px;
+    }
+  }
+
+  &--feedback {
+    margin-bottom: 24px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 16px;
+      font-size: 30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -75,5 +125,17 @@
 
   @media (min-width: @tablet-width) {
     line-height: 26px;
+  }
+
+  &--br {
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &--feedback {
+    @media (min-width: @tablet-width) {
+      margin-top: 10px;
+    }
   }
 }

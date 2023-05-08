@@ -8,7 +8,7 @@
       position: absolute;
       height: 37px;
       width: auto;
-      top: -16px;
+      top: -15px;
       left: 0;
       right: 0;
       background-image: url("../img/divider-secondary.svg");
@@ -71,15 +71,32 @@
 
 .advantages-list__title {
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 26px;
   text-transform: uppercase;
   color: #ffffff;
 
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+    font-size: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 72px;
+  }
+
   &--additional {
-    margin-bottom: 14px;
+    margin-bottom: 8px;
     color: #000000;
+  }
+
+  &--br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
   }
 }
 
@@ -87,17 +104,18 @@
   display: block;
 
   @media (min-width: @tablet-width) {
-    min-width: 512px;
+    width: 512px;
+    height: auto;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 800px;
+    width: 800px;
   }
 }
 
 .advantages-list__subtitle {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
@@ -105,5 +123,25 @@
 
   &--additional {
     color: #333333;
+  }
+
+  &--description {
+    margin-top: 15px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 23px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 18px;
+    }
+  }
+
+  &--br {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
   }
 }

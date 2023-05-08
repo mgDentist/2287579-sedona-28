@@ -11,6 +11,10 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body class="page__body">
@@ -48,7 +52,7 @@
       </section>
       <section class="catalog-content">
         <div class="text-element text-element--content">
-          <h2 class="text-element__title">Фото и видео</h2>
+          <h2 class="text-element__title text-element__title--catalog">Фото и видео</h2>
           <p class="text-element__subtitle">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
             забыть о политике и экономике.</p>
         </div>
@@ -68,7 +72,7 @@
                   alt="Американская дорога на закате.">
               </picture>
             </a>
-            <div class="catalog-item__description-wrapper">
+            <div class="catalog-item__description-wrapper catalog-item__description-wrapper--wide">
               <p class="catalog-item__figcaption">Неродные просторы</p>
               <p class="catalog-item__address">Автор фото: Борис</p>
               <button class="catalog-item__button" type="button">
@@ -161,7 +165,7 @@
       </section>
       <section class="video-block">
         <div class="text-element text-element--video-block">
-          <h2 class="text-element__title">Все еще сомневаетесь?</h2>
+          <h2 class="text-element__title text-element__title--video-block">Все еще сомневаетесь?</h2>
           <p class="text-element__subtitle">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в
             очередной раз!</p>
         </div>
@@ -173,7 +177,7 @@
             <source media="(min-width: 1280px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
             <img class="video-block__img" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280"
-              height="177" alt="Превью видео.">
+              height="177" alt="Превью видео о Седоне." loading="lazy">
           </picture>
         </div>
       </section>
