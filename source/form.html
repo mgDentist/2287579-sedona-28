@@ -11,6 +11,10 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preload" href="fonts/ptsans.woff" as="font">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff" as="font">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font">
 </head>
 
 <body class="page__body">
@@ -48,8 +52,8 @@
       </section>
       <section class="feedback">
         <div class="text-element text-element--feedback">
-          <h2 class="text-element__title">Оставьте свой отзыв</h2>
-          <p class="text-element__subtitle">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          <h2 class="text-element__title text-element__title--feedback">Оставьте свой отзыв</h2>
+          <p class="text-element__subtitle text-element__subtitle--feedback">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
             посещенных вами достопримечательностях</p>
         </div>
         <form class="feedback__form form" action="https://echo.htmlacademy.ru/" method="get">
@@ -68,7 +72,7 @@
               <input class="input-form__field" type="text" name="secondname" placeholder="Викторович">
             </label>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--divider-vertical">
+          <fieldset class="form__fieldset form__fieldset--contacts">
             <legend class="form__legend">Контактная информация:</legend>
             <label class="form__input input-form input-form--icon input-form--icon-phone">
               <span class="input-form__text">Контактный телефон*:</span>
@@ -108,7 +112,7 @@
               <input class="checkbox-form__field visually-hidden" type="checkbox" name="sights" value="devil-bridge"
                 checked>
               <span class="checkbox-form__input"></span>
-              <span class="checkbox-form__text">Мост дьявола</span>
+              <span class="checkbox-form__text">Мост Дьявола</span>
             </label>
             <label class="form__checkbox checkbox-form">
               <input class="checkbox-form__field visually-hidden" type="checkbox" name="sights" value="mountain-bell"
@@ -128,7 +132,7 @@
               <span class="checkbox-form__text">Красные скалы</span>
             </label>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--long">
+          <fieldset class="form__fieldset form__fieldset--long form__fieldset--description">
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <label class="form__textarea textarea-form">
               <span class="visually-hidden">Опишите ваши эмоции</span>
@@ -137,7 +141,7 @@
             </label>
           </fieldset>
           <button class="form__button button" type="submit">Отправить отзыв</button>
-          <small class="form__note">* — обязательные поля</small>
+          <p class="form__note">* — обязательные поля</p>
         </form>
       </section>
     </main>
@@ -180,8 +184,7 @@
       <div class="modal__wrapper">
         <div class="modal__success-wrapper">
           <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-          <p class="modal__subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы
-            опубликуем его на сайте.</p>
+          <p class="modal__subtitle">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="modal__wrapper-btn-success">
           <button class="modal__button modal__button--success button">Закрыть окно</button>

@@ -1,7 +1,7 @@
 .advantages-sublist {
   .clear-list();
   background-color: #ffffff;
-  padding: 25px 18px 13px 65px;
+  padding: 24px 18px 20px 65px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -13,18 +13,24 @@
 .advantages-sublist__wrapper {
   @media (min-width: @tablet-width) {
     width: 256px;
-    padding: 156px 33px 62px;
+    padding: 148px 40px 62px;
   }
 
   @media (min-width: @desktop-width) {
     width: 400px;
-    padding: 168px 50px 69px;
+    padding: 161px 50px 69px;
+  }
+
+  &--souvenirs {
+    @media (min-width: @tablet-width) and (max-width: 1279px) {
+      padding-top: 144px;
+    }
   }
 }
 
 .advantages-sublist__item {
   position: relative;
-  padding-bottom: 33px;
+  padding-bottom: 25px;
   text-align: left;
 
   &::before {
@@ -32,7 +38,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 0;
+    top: -10px;
     left: -48px;
     background-repeat: no-repeat;
     background-size: contain;
@@ -58,15 +64,23 @@
     &::before {
       width: 80px;
       height: 80px;
-      top: 62px;
+      top: 56px;
       left: 50%;
       translate: -50%;
+    }
+
+    &--souvenirs::before {
+      top: 60px;
     }
   }
 
   @media (min-width: @desktop-width) {
+    &--souvenirs::before {
+      background-image: url("../img/icon-gift-desktop.svg");
+    }
+
     &::before {
-      top: 69px;
+      top: 66px;
     }
   }
 }
@@ -77,6 +91,10 @@
   line-height: 26px;
   text-transform: uppercase;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .advantages-sublist__subtitle {
@@ -86,4 +104,16 @@
   line-height: 21px;
   text-transform: uppercase;
   color: #333333;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+  }
+
+  &--br {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+  }
 }
